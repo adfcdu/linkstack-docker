@@ -39,6 +39,7 @@ RUN apk --no-cache --update \
     && mkdir /htdocs
     
 RUN git clone https://github.com/adfcdu/LinkStack.git /linkstack
+RUN git clone https://github.com/adfcdu/adfcdulink.git /linkstack/themes/adfcdulink
 
 COPY linkstack /htdocs
 COPY configs/apache2/httpd.conf /etc/apache2/httpd.conf
