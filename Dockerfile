@@ -37,6 +37,8 @@ RUN apk --no-cache --update \
     php82-redis \
     tzdata \
     && mkdir /htdocs
+    
+RUN git clone https://github.com/adfcdu/LinkStack.git
 
 COPY linkstack /htdocs
 COPY configs/apache2/httpd.conf /etc/apache2/httpd.conf
