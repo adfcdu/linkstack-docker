@@ -38,7 +38,7 @@ RUN apk --no-cache --update \
     tzdata \
     && mkdir /htdocs
     
-RUN git clone https://github.com/adfcdu/LinkStack.git
+RUN git clone https://github.com/adfcdu/LinkStack.git /linkstack
 
 COPY linkstack /htdocs
 COPY configs/apache2/httpd.conf /etc/apache2/httpd.conf
